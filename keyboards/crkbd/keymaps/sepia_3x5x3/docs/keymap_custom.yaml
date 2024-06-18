@@ -1,4 +1,7 @@
 # Inspiring on https://github.com/acerne/acorne?tab=readme-ov-file and https://github.com/manna-harbour/miryoku?tab=readme-ov-file
+# Symbols -> https://www.piliapp.com/symbol/
+
+# Missing -> _ / ' / ; / :
 
 layout: 
   qmk_keyboard: crkbd/rev1
@@ -8,7 +11,7 @@ layers:
     - [Q, W, E, R, T, Y, U, I, O, P]
     - [{t: A, h: LGUI}, {t: S, h: LALT}, {t: D, h: LCTL}, {t: F, h: LSFT}, G, H, {t: J, h: RSFT}, {t: K, h: RCTL}, {t: L, h: RALT}, Ñ]
     - [Z, X, C, V, B, N, M, ',', ., /]
-    - [ESC, SPACE, TAB, ENTER, BCKSPC, DELETE]
+    - ['⎋', '⎵', '⇥', '⏎', '⌫', '⌦']
   NUM:
     - ['', Ctl+ LEFT, ↑, Ctl+ RIGHT, 📄↑, +, 7, 8, 9, '*']
     - ['', ←, ↓, →, 📄↓, '-', 4, 5, 6, /]
@@ -59,6 +62,11 @@ layers:
     - ['', '', '', '', '', '', '⏮', '🔊↓', '⏭︎', '']
     - ['', '', '', '', '', '', '', '', '', '']
     - [{type: held}, '', '', '⏹︎', '⏯︎', '🔇']
+  NEW_NAV:
+    - ['', '', '', '', '', '', 'HOME', '↑', 'END', '📄↑']
+    - ['', '', '', '', '', '', '←', '↓', '→', '📄↓']
+    - ['', '', '', '', '', '', '', '', '', '']
+    - ['', '', '', '', '', '']
   BLANK:
     - ['', '', '', '', '', '', '', '', '', '']
     - ['', '', '', '', '', '', '', '', '', '']
