@@ -1,17 +1,14 @@
+# Inspiring on https://github.com/acerne/acorne?tab=readme-ov-file and https://github.com/manna-harbour/miryoku?tab=readme-ov-file
+
 layout: 
   qmk_keyboard: crkbd/rev1
   qmk_layout: LAYOUT_split_3x5_3
 layers:
   DEF:
     - [Q, W, E, R, T, Y, U, I, O, P]
-    - [{t: A, h: LGUI}, {t: S, h: LALT}, {t: D, h: LCTL}, {t: F, h: LSFT}, G, H, {t: J, h: RSFT}, {t: K, h: RCTL}, {t: L, h: RALT}, TD(TD SEMI QUOTE)]
+    - [{t: A, h: LGUI}, {t: S, h: LALT}, {t: D, h: LCTL}, {t: F, h: LSFT}, G, H, {t: J, h: RSFT}, {t: K, h: RCTL}, {t: L, h: RALT}, Ñ]
     - [Z, X, C, V, B, N, M, ',', ., /]
-    - TD(TD ESC TAB)
-    - LT( NUM, BSPC)
-    - {t: SPC, h: LGUI}
-    - {t: ENT, h: RGUI}
-    - LT( SYM, DEL)
-    - {t: '`', h: RALT}
+    - [ESC, SPACE, TAB, ENTER, BCKSPC, DELETE]
   NUM:
     - ['', Ctl+ LEFT, ↑, Ctl+ RIGHT, 📄↑, +, 7, 8, 9, '*']
     - ['', ←, ↓, →, 📄↓, '-', 4, 5, 6, /]
@@ -42,3 +39,28 @@ layers:
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
+  NEW_SYM:
+    - ['%', '1', '2', '3', '*', '', '', '', '', '']
+    - ['=', '4', '5', '6', '/', '', '', '', '', '']
+    - ['#', '7', '8', '9', '+', '', '', '', '', '']
+    - ['.', '0', '-', {type: held}, '', '']
+  NEW_NUM:
+    - ["!", "?", '"', '<', '>', '', '', '', '', '']
+    - ['&', '|', '\', '(', ')', '', '', '', '', '']
+    - ['^', '~', '@', '[', ']', '', '', '', '', '']
+    - ['{', '}', '-', '', {type: held}, '']
+  NEW_FN:
+    - ['F1', 'F2', 'F3', 'F4', 'PRSCR', '', '', '', '', '']
+    - ['F5', 'F6', 'F7', 'F8', 'INS', '', '', '', '', '']
+    - ['F9', 'F10', 'F11', 'F12', '', '', '', '', '', '']
+    - ['MENU', '', '', '', '', {type: held}]
+  NEW_MEDIA:
+    - ['', '', '', '', '', '', '', '🔊↑', '', '']
+    - ['', '', '', '', '', '', '⏮', '🔊↓', '⏭︎', '']
+    - ['', '', '', '', '', '', '', '', '', '']
+    - [{type: held}, '', '', '⏹︎', '⏯︎', '🔇']
+  BLANK:
+    - ['', '', '', '', '', '', '', '', '', '']
+    - ['', '', '', '', '', '', '', '', '', '']
+    - ['', '', '', '', '', '', '', '', '', '']
+    - ['', '', '', '', '', '']

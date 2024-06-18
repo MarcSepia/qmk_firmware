@@ -1,0 +1,44 @@
+layout: 
+  qmk_keyboard: crkbd/rev1
+  qmk_layout: LAYOUT_split_3x5_3
+layers:
+  DEF:
+    - [Q, W, E, R, T, Y, U, I, O, P]
+    - [{t: A, h: LGUI}, {t: S, h: LALT}, {t: D, h: LCTL}, {t: F, h: LSFT}, G, H, {t: J, h: RSFT}, {t: K, h: RCTL}, {t: L, h: RALT}, TD(TD SEMI QUOTE)]
+    - [Z, X, C, V, B, N, M, ',', ., /]
+    - TD(TD ESC TAB)
+    - LT( NUM, BSPC)
+    - {t: SPC, h: LGUI}
+    - {t: ENT, h: RGUI}
+    - LT( SYM, DEL)
+    - {t: '`', h: RALT}
+  NUM:
+    - ['', Ctl+ LEFT, ↑, Ctl+ RIGHT, 📄↑, +, 7, 8, 9, '*']
+    - ['', ←, ↓, →, 📄↓, '-', 4, 5, 6, /]
+    - ['', '', '', HOME, END, '0', 1, 2, 3, PDOT]
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - MO( FN)
+    - {t: ▽, type: trans}
+  SYM:
+    - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
+    - ['`', '', '', '', '', '-', '=', '[', ']', \]
+    - ['~', '', '', '', '', _, +, '{', '}', '|']
+    - {t: ▽, type: trans}
+    - MO( FN)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+  FN:
+    - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10]
+    - [RGB VAI, '', MPRV, MNXT, MPLY, 🔇, 🔊↓, 🔊↑, '', F11]
+    - [RGB VAD, RGB MOD, RGB TOG, '', '', '', '', '', '', F12]
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}

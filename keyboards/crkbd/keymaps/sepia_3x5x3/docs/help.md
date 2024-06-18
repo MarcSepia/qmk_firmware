@@ -24,3 +24,7 @@ Cargar el keymap.yaml > https://keymap-drawer.streamlit.app/?example_yaml=3x5.ya
 Docs de como hacerlo > https://github.com/caksoylar/keymap-drawer/blob/v0.17.0/KEYMAP_SPEC.md
 https://github.com/caksoylar/keymap-drawer/blob/v0.17.0/KEYMAP_SPEC.md#layers
 ```
+
+Video configuración QMK
+
+https://www.youtube.com/watch?v=k9YnXnE7cBI&ab_channel=HolaMundo 
