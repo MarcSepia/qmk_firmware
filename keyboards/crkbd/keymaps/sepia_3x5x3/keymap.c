@@ -37,13 +37,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SYM] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
-              KC_NO,     KC_NO,   LCTL(KC_LEFT),  KC_UP,  LCTL(KC_RIGHT), KC_PGUP,                        KC_PLUS,    KC_P7,       KC_P8,     KC_P9,    KC_ASTERISK,   KC_NO,
+              KC_NO,     ES_EXLM,    ES_QUES,    ES_DQUO,    ES_LABK,    ES_RABK,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,   LCAG(KC_NO),  KC_LEFT,   KC_DOWN,    KC_RIGHT,    KC_PGDN,                         KC_MINUS,   KC_P4,       KC_P5,      KC_P6,    KC_SLASH,     KC_NO,
+              KC_NO,     ES_AMPR,    ES_PIPE,    ES_BSLS,    ES_LCBR,    ES_RCBR,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,     KC_NO,      KC_NO,      KC_NO,      KC_HOME,    KC_END,                           KC_0,      KC_P1,       KC_P2,      KC_P3,     KC_PDOT,     KC_NO,
+              KC_NO,     ES_CIRC,    ES_TILD,     ES_AT,     ES_LBRC,    ES_RBRC,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-                                                KC_TRNS,    KC_TRNS,     KC_TRNS,                         KC_TRNS,    MO(_FN),    KC_TRNS
+                                                ES_LCBR,    ES_RCBR,     ES_UNDS,                          KC_NO,     KC_NO,       KC_NO
         //                                  '-------------------------------------'                    '-------------------------------------'
     ),
     
