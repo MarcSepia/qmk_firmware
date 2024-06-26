@@ -32,6 +32,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define _NUM 1
 #define _SYM 2
 #define _FN 3
+#define _MEDIA 4
+#define _NAV 5
 
 #define TAPPING_TOGGLE 2
 #define TAPPING_FORCE_HOLD_PER_KEY

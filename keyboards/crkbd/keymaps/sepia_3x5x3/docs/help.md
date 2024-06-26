@@ -25,6 +25,14 @@ Docs de como hacerlo > https://github.com/caksoylar/keymap-drawer/blob/v0.17.0/K
 https://github.com/caksoylar/keymap-drawer/blob/v0.17.0/KEYMAP_SPEC.md#layers
 ```
 
+
+Crear el keymap.c
+
+Keycodes - https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md 
+Language specific - https://github.com/qmk/qmk_firmware/blob/master/docs/reference_keymap_extras.md 
+Keymap spanish - https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_spanish.h 
+
+
 Video configuración QMK
 
 https://www.youtube.com/watch?v=k9YnXnE7cBI&ab_channel=HolaMundo 
