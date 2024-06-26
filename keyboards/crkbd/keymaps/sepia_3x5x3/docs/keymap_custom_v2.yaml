@@ -1,7 +1,8 @@
 # Inspiring on https://github.com/acerne/acorne?tab=readme-ov-file and https://github.com/manna-harbour/miryoku?tab=readme-ov-file
 # Symbols -> https://www.piliapp.com/symbol/
 
-# Missing -> 
+# Missing -> Block mayus / º / ª / ¬ / ¨ / ¿ / ·
+# Tal vez poner todos estos simbolos en el SYM a la derecha
 
 layout: 
   qmk_keyboard: crkbd/rev1
@@ -12,12 +13,12 @@ layers:
     - [{t: A, h: Shift}, S, D, F, G, H, J, K, L, {t: Ñ, h: Shift}]
     - [{t: A, h: Ctrl}, {t: X, h: Win}, {t: C, h: Alt}, V, B, N, M, {t: ',', h: Alt}, {t: '.', h: AltGr}, {t: '/', h: Ctrl}]
     - ['⎋', '⎵', '⇥', '⏎', '⌫', '⌦']
-  SYM:
+  NUM:
     - ['%', '1', '2', '3', '*', '', '', '', '', '`']
     - ['=', '4', '5', '6', '/', '', '', '', '', '´']
     - ['#', '7', '8', '9', '+', '', '', '', '', '']
     - ['.', '0', '-', {type: held}, '', '']
-  NUM:
+  SYM:
     - ["!", "?", '"', '<', '>', '', '', '', '', '']
     - ['&', '|', '\', '(', ')', '', '', '', '', '']
     - ['^', '~', '@', '[', ']', '', '', '', '', '']
@@ -36,4 +37,4 @@ layers:
     - ['', '', '', '', '', '', 'HOME', '↑', 'END', '📄↑']
     - ['', '', '', '', '', '', '←', '↓', '→', '📄↓']
     - ['', '', '', '', '', '', '', ';', ':', '']
-    - ['', {type: held}, '', '', '', '']
+    - ['', '', {type: held}, '', '', '']

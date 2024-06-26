@@ -17,6 +17,11 @@ Generar representacion del keymap https://github.com/caksoylar/keymap-drawer?tab
 qmk c2json -kb crkbd -km corne_3x5x3_jporter_fixing ./keyboards/crkbd/keymaps/corne_3x5x3_jporter_fixing/keymap.c | keymap parse -c 10 -q - > keymap.yaml
 ```
 
+Algunos layouts 
+
+acorne - https://github.com/acerne/acorne/blob/master/kle-layout-image.png 
+
+
 Crear el keymap visual
 
 ```
