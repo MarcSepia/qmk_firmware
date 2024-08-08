@@ -1,7 +1,7 @@
 # Inspiring on https://github.com/acerne/acorne?tab=readme-ov-file and https://github.com/manna-harbour/miryoku?tab=readme-ov-file
 # Symbols -> https://www.piliapp.com/symbol/
 
-# Missing ->
+# Missing -> € / $
 # Tal vez poner todos estos simbolos en el SYM a la derecha
 
 # Cambiar los numeros al otro lado 
@@ -33,7 +33,7 @@ layers:
   NUM:
     - ['', '', '', '', '', '*', '7', '8', '9', '%']
     - ['Caps Lock', '', '', '', '', '/', '4', '5', '6', '=']
-    - ['', '', '', '', '', '+', '1', '2', '3', '#']
+    - ['Undo', 'Cut', 'Copy', 'Paste', '', '+', '1', '2', '3', '#']
     - ['', '', {type: held}, '-', '0', '.']
   NAV:
     - ['', '', '', '', '', '', 'HOME', '↑', 'END', '📄↑']

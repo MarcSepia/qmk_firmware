@@ -29,11 +29,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define EE_HANDS
 
 #define _QWERTY 0
-#define _NUM 1
-#define _SYM 2
+#define _SYM_1 1
+#define _SYM_2 2
 #define _FN 3
 #define _MEDIA 4
 #define _NAV 5
+#define _NUM 6
 
 #define TAPPING_TOGGLE 2
 #define TAPPING_FORCE_HOLD_PER_KEY
