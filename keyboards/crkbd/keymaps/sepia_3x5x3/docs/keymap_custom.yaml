@@ -1,10 +1,8 @@
 # Inspiring on https://github.com/acerne/acorne?tab=readme-ov-file and https://github.com/manna-harbour/miryoku?tab=readme-ov-file
 # Symbols -> https://www.piliapp.com/symbol/
 
-# Missing -> € / $
 # Tal vez poner todos estos simbolos en el SYM a la derecha
-
-# Cambiar los numeros al otro lado 
+# Num lock?
 
 layout: 
   qmk_keyboard: crkbd/rev1
@@ -21,8 +19,8 @@ layers:
     - ['^', '~', '@', '[', ']', '', '', '', '', '']
     - ['{', '}', '_', {type: held}, '', '']
   SYM_2:
-    - ['¡', '¿', "'", '', '', '', '', '', '', '']
-    - ['ª', 'º', '/', '', '', '', '', '', '', '']
+    - ['¡', '¿', "'", '€', '', '', '', '', '', '']
+    - ['ª', 'º', '/', '$', '', '', '', '', '', '']
     - ['¨', '¬', '·', '', '', '', '', '', '', '']
     - ['', '', '', '', {type: held}, '']
   FN:
