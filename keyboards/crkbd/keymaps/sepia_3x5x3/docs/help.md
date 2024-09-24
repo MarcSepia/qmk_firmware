@@ -1,20 +1,20 @@
 Compilar
 
 ```
-qmk compile -kb crkbd -km corne_3x5x3_jporter_fixing -e CONVERT_TO=rp2040_ce
+qmk compile -kb crkbd -km sepia_3x5x3 -e CONVERT_TO=rp2040_ce
 ```
 
 Generar keymap.json
 
 ```
-qmk c2json -kb crkbd -km corne_3x5x3_jporter_fixing ./keyboards/crkbd/keymaps/corne_3x5x3_jporter_fixing/keymap.c > test.json
+qmk c2json -kb crkbd -km sepia_3x5x3 ./keyboards/crkbd/keymaps/sepia_3x5x3/keymap.c > test.json
 ```
 
 Generar representacion del keymap https://github.com/caksoylar/keymap-drawer?tab=readme-ov-file
 
 ```
 # from keymap.c
-qmk c2json -kb crkbd -km corne_3x5x3_jporter_fixing ./keyboards/crkbd/keymaps/corne_3x5x3_jporter_fixing/keymap.c | keymap parse -c 10 -q - > keymap.yaml
+qmk c2json -kb crkbd -km sepia_3x5x3 ./keyboards/crkbd/keymaps/sepia_3x5x3/keymap.c | keymap parse -c 10 -q - > keymap.yaml
 ```
 
 Algunos layouts 

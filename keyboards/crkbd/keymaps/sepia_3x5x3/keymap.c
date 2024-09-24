@@ -1,7 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "keymap_spanish.h"
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_spanish.h#L78
-#endif
 
 // Layer tap example -> LT(_NUM, KC_BSPC)
 
@@ -14,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
               KC_NO,  LCTL_T(ES_Z),LGUI_T(ES_X),LALT_T(ES_C), ES_V,       ES_B,                            ES_N,      ES_M,LALT_T(ES_COMM),RALT_T(ES_DOT),RCTL_T(ES_SLSH),KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-                                    LT(_MEDIA, KC_ESC), LT(_NAV, KC_SPC), LT(_NUM, KC_TAB),       LT(_NUM_1, KC_ENTER), LT(_SYM_2, KC_BSPC),LT(_FN, KC_DEL)
+                                    LT(_MEDIA, KC_ESC), LT(_NAV, KC_SPC), LT(_NUM, KC_TAB),       LT(_SYM_1, KC_ENTER), LT(_SYM_2, KC_BSPC),LT(_FN, KC_DEL)
         //                                  '-------------------------------------'                    '-------------------------------------'
     ),
 
@@ -53,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
                                                  KC_MENU,     KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO
         //                                  '-------------------------------------'                    '-------------------------------------'
-    )
+    ),
 
     [_NUM] = LAYOUT_split_3x6_3(
 
