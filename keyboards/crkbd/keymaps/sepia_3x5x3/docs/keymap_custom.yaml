@@ -2,7 +2,7 @@
 # Symbols -> https://www.piliapp.com/symbol/
 
 # Tal vez poner todos estos simbolos en el SYM a la derecha
-# Num lock?
+# Num lock? slash {qwerty} es un 7 - Parece que no funciona tal vez por ser control?
 
 layout: 
   qmk_keyboard: crkbd/rev1
@@ -22,7 +22,7 @@ layers:
     - ['¡', '¿', "'", '€', '', '', '', '', '', '']
     - ['ª', 'º', '/', '$', '', '', '', '', '', '']
     - ['¨', '¬', '·', '', '', '', '', '', '', '']
-    - ['', '', '', '', {type: held}, '']
+    - ['', '', '-', '', {type: held}, '']
   FN:
     - ['F1', 'F2', 'F3', 'F4', 'PRSCR', '', '', '', '', '']
     - ['F5', 'F6', 'F7', 'F8', 'INS', '', '', '', '', '']
