@@ -8,8 +8,6 @@ EXTRAKEY_ENABLE = yes
 WPM_ENABLE = yes
 AUTO_SHIFT_ENABLE = no
 
-# added stuff to optimize compiled size
-TAP_DANCE_ENABLE = yes
 
 # ifeq ($(BONGO_ENABLED), yes)
 #     OPT_DEFS += -DBONGO_ENABLED

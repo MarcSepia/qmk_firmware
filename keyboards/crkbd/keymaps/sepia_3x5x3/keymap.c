@@ -1,7 +1,4 @@
 #include QMK_KEYBOARD_H
-
-#ifdef TAP_DANCE_ENABLE
-#include "tapdances.c"
 #include "keymap_spanish.h"
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_spanish.h#L78
 #endif
