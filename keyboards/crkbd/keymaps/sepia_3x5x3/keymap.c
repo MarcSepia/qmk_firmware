@@ -11,7 +11,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
               KC_NO,  LSFT_T(ES_A),   ES_S,       ES_D,       ES_F,       ES_G,                            ES_H,      ES_J,        ES_K,       ES_L,  RSFT_T(ES_NTIL), KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,  LCTL_T(ES_Z),LGUI_T(ES_X),LALT_T(ES_C), ES_V,       ES_B,                            ES_N,      ES_M,LALT_T(ES_COMM),RALT_T(ES_DOT),RCTL_T(ES_SLSH),KC_NO,
+              KC_NO,  LCTL_T(ES_Z),LGUI_T(ES_X),LALT_T(ES_C), ES_V,       ES_B,                            ES_N,      ES_M,LALT_T(ES_COMM),RALT_T(ES_DOT),RCTL_T(ES_7),KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
                                     LT(_MEDIA, KC_ESC), LT(_NAV, KC_SPC), LT(_NUM, KC_TAB),       LT(_SYM_1, KC_ENTER), LT(_SYM_2, KC_BSPC),LT(_FN, KC_DEL)
         //                                  '-------------------------------------'                    '-------------------------------------'
