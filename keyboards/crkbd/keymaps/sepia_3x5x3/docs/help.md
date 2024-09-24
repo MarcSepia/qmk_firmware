@@ -1,8 +1,20 @@
-Compilar
 
+Pre-requisitos
+1. Tener instalado python
+2. Haber instalado qmk con pip3
+3. Hacer qmk setup
+
+
+Crear y cargar un layout para el keeb
+1. Compilar
 ```
 qmk compile -kb crkbd -km sepia_3x5x3 -e CONVERT_TO=rp2040_ce
 ```
+2. Usar el fichero .uf2 (se guarda también en .build)
+3. Conectar el keeb como un "external device" (conectarlo y arrancar el modo bootloader)
+4. "Drag and drop" del fichero .uf2 sobre el "external device" que aparecerá en el sistema
+5. Repetir para el otro lado del keeb
+
 
 Generar keymap.json
 
