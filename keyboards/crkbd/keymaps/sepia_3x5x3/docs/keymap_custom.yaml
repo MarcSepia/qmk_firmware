@@ -11,7 +11,7 @@ layers:
   QWERTY:
     - [Q, W, E, R, T, Y, U, I, O, P]
     - [{t: A, h: Shift}, S, D, F, G, H, J, K, L, {t: Ñ, h: Shift}]
-    - [{t: Z, h: Ctrl}, {t: X, h: Win}, {t: C, h: Alt}, V, B, N, M, {t: ',', h: Alt}, {t: '.', h: AltGr}, {t: '/', h: Ctrl}]
+    - [{t: Z, h: Ctrl}, {t: X, h: Win}, {t: C, h: Alt}, V, B, N, M, {t: ',', h: Alt}, {t: '.', h: AltGr}, {t: '-', h: Ctrl}]
     - ['⎋', '⎵', '⇥', '⏎', '⌫', '⌦']
   SYM_1:
     - ["!", "?", '"', '<', '>', '', '', '', '', '']
