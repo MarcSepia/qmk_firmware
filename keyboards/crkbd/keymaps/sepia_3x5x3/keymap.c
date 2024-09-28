@@ -95,6 +95,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LSFT_T(ES_A):  // Shift tap en tecla "A"
+        case LCTL_T(ES_Z):  // Control tap en tecla "Z"
+        case LGUI_T(ES_X):  // GUI tap en tecla "X"
+        case LALT_T(ES_C):  // Alt tap en tecla "C"
+        case RSFT_T(ES_NTIL):  // Shift derecho tap en tecla "Ñ"
+        case RALT_T(ES_DOT):   // Alt derecho tap en tecla "."
+        case RCTL_T(ES_MINS):  // Control derecho tap en tecla "-"
+        case LT(_MEDIA, KC_ESC):
+        case LT(_NAV, KC_SPC):
+        case LT(_NUM, KC_TAB):
+        case LT(_SYM_1, KC_ENTER):
+        case LT(_SYM_2, KC_BSPC):
+        case LT(_FN, KC_DEL):
+            return 200;  // Tapping term personalizado para estas teclas
+        default:
+            return 100;  // Tapping term general para otras teclas
+    }
+}
 
 //     [_EMPTY] = LAYOUT_split_3x6_3(
 //         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
