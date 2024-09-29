@@ -9,9 +9,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
               KC_NO,      ES_Q,       ES_W,       ES_E,       ES_R,       ES_T,                            ES_Y,      ES_U,        ES_I,       ES_O,       ES_P,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,  LSFT_T(ES_A),   ES_S,       ES_D,       ES_F,       ES_G,                            ES_H,      ES_J,        ES_K,       ES_L,  RSFT_T(ES_NTIL), KC_NO,
+              KC_NO,  LCTL_T(ES_A),LGUI_T(ES_S),LALT_T(ES_D),LSFT_T(ES_F),ES_G,                            ES_H,  RSFT_T(ES_J),LALT_T(ES_K),LGUI_T(ES_L),RCTL_T(ES_NTIL),KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,  LCTL_T(ES_Z),LGUI_T(ES_X),LALT_T(ES_C), ES_V,       ES_B,                            ES_N,      ES_M,LALT_T(ES_COMM),RALT_T(ES_DOT),RCTL_T(ES_MINS),KC_NO,
+              KC_NO,      ES_Z,       ES_X,       ES_C,       ES_V,       ES_B,                            ES_N,      ES_M,       ES_COMM,    ES_DOT,     ES_MINS,    KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
                                     LT(_MEDIA, KC_ESC), LT(_NAV, KC_SPC), LT(_NUM, KC_TAB),       LT(_SYM_1, KC_ENTER), LT(_SYM_2, KC_BSPC),LT(_FN, KC_DEL)
         //                                  '-------------------------------------'                    '-------------------------------------'
@@ -97,23 +97,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LSFT_T(ES_A):  // Shift tap en tecla "A"
-        case LCTL_T(ES_Z):  // Control tap en tecla "Z"
-        case LGUI_T(ES_X):  // GUI tap en tecla "X"
-        case LALT_T(ES_C):  // Alt tap en tecla "C"
-        case RSFT_T(ES_NTIL):  // Shift derecho tap en tecla "Ñ"
-        case RALT_T(ES_DOT):   // Alt derecho tap en tecla "."
-        case RCTL_T(ES_MINS):  // Control derecho tap en tecla "-"
-        case LALT_T(ES_COMM):
-        case LT(_MEDIA, KC_ESC):
-        case LT(_NAV, KC_SPC):
-        case LT(_NUM, KC_TAB):
-        case LT(_SYM_1, KC_ENTER):
-        case LT(_SYM_2, KC_BSPC):
-        case LT(_FN, KC_DEL):
-            return 200;  // Tapping term personalizado para estas teclas
-        default:
-            return 100;  // Tapping term general para otras teclas
+      case LCTL_T(ES_A): 
+      case LGUI_T(ES_S):
+      case LALT_T(ES_D):
+      case LSFT_T(ES_F):
+      case RSFT_T(ES_J):
+      case LALT_T(ES_K):
+      case LGUI_T(ES_L):
+      case RCTL_T(ES_NTIL):
+      case LT(_MEDIA, KC_ESC):
+      case LT(_NAV, KC_SPC):
+      case LT(_NUM, KC_TAB):
+      case LT(_SYM_1, KC_ENTER):
+      case LT(_SYM_2, KC_BSPC):
+      case LT(_FN, KC_DEL):
+            return 200;
+      default:
+            return 100;
     }
 }
 
