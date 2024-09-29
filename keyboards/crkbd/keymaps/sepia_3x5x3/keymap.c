@@ -104,6 +104,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case RSFT_T(ES_NTIL):  // Shift derecho tap en tecla "Ñ"
         case RALT_T(ES_DOT):   // Alt derecho tap en tecla "."
         case RCTL_T(ES_MINS):  // Control derecho tap en tecla "-"
+        case LALT_T(ES_COMM):
         case LT(_MEDIA, KC_ESC):
         case LT(_NAV, KC_SPC):
         case LT(_NUM, KC_TAB):
