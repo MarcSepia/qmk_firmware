@@ -2,12 +2,8 @@
 # Symbols -> https://www.piliapp.com/symbol/
 
 # Tal vez poner todos estos simbolos en el SYM a la derecha
-# Num lock? slash {qwerty} es un 7 - Parece que no funciona tal vez por ser control?
-# Poner keys mas usadas en las homing keys (sobretodo symbol layer, mover los parentesis para que no esten desplazados a la izquierda)
 # Poner también el # en el symbol layer, no solo en el number layer
-# Mover ctrl, gui y alt a las homing keys.
 # Añadir repeat keys  https://docs.qmk.fm/features/repeat_key
-# Añadir botón para brightness
 
 layout: 
   qmk_keyboard: crkbd/rev1
@@ -15,8 +11,8 @@ layout:
 layers:
   QWERTY:
     - [Q, W, E, R, T, Y, U, I, O, P]
-    - [{t: A, h: Shift}, S, D, F, G, H, J, K, L, {t: Ñ, h: Shift}]
-    - [{t: Z, h: Ctrl}, {t: X, h: Win}, {t: C, h: Alt}, V, B, N, M, {t: ',', h: Alt}, {t: '.', h: AltGr}, {t: '-', h: Ctrl}]
+    - [{t: A, h: Ctrl}, {t: S, h: Gui}, {t: D, h: Alt}, {t: F, h: Shift}, G, H, {t: J, h: Shift}, {t: K, h: Alt}, {t: L, h: Gui}, {t: Ñ, h: Ctrl}]
+    - [Z, X, C, V, B, N, M, ',', '.', '-']
     - ['⎋', '⎵', '⇥', '⏎', '⌫', '⌦']
   SYM_1:
     - ["!", '?', '{', '}', '|', '', '', '', '', '']
@@ -44,7 +40,7 @@ layers:
     - ['', '', '', '', '', '', '', '', '', '']
     - ['', {type: held}, '', '', '', '']
   MEDIA:
-    - ['', '', '', '', '', '', '', '🔊↑', '', '`']
-    - ['', '', '', '', '', '', '⏮', '🔊↓', '⏭︎', '´']
+    - ['', '', '🔆↑', '', '', '', '', '🔊↑', '', '`']
+    - ['', '', '🔆↓', '', '', '', '⏮', '🔊↓', '⏭︎', '´']
     - ['', '', 'ç', '', '', '', '', '', '', '']
     - [{type: held}, '', '', '⏹︎', '⏯︎', '🔇']
