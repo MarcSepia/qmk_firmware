@@ -19,25 +19,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SYM_1] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
-              KC_NO,     ES_EXLM,    ES_QUES,    ES_DQUO,    ES_LABK,    ES_RABK,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
+              KC_NO,    ES_EXLM,     ES_QUES,    ES_LCBR,    ES_RCBR,    ES_PIPE,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,     ES_AMPR,    ES_PIPE,    ES_SLSH,    ES_LPRN,    ES_RPRN,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
+              KC_NO,    ES_SLSH,     ES_DQUO,    ES_LPRN,    ES_RPRN,    ES_AMPR,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,     ES_CIRC,    ES_TILD,     ES_AT,     ES_LBRC,    ES_RBRC,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
+              KC_NO,     ES_AT,      ES_TILD,    ES_LBRC,    ES_RBRC,    ES_CIRC,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-                                                ES_LCBR,    ES_RCBR,     ES_UNDS,                          KC_NO,     KC_NO,       KC_NO
+                                                ES_LABK,    ES_RABK,     ES_EQL,                           KC_NO,     KC_NO,       KC_NO
         //                                  '-------------------------------------'                    '-------------------------------------'
     ),
 
     [_SYM_2] = LAYOUT_split_3x6_3(
         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
-              KC_NO,     ES_IEXL,    ES_IQUE,    ES_QUOT,    ES_EURO,     KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
+              KC_NO,     ES_IEXL,    ES_IQUE,    ES_DLR,     ES_EURO,    ES_FORD,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,     ES_FORD,    ES_MORD,    ES_BSLS,     ES_DLR,     KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
+              KC_NO,     ES_BSLS,    ES_QUOT,    ES_UNDS,    ES_MINS,    ES_MORD,                          KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,     ES_DIAE,    ES_NOT,     ES_BULT,     KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
+              KC_NO,     ES_DIAE,    ES_NOT,     ES_BULT,    ES_HASH,     KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-                                                  KC_NO,      KC_NO,     ES_MINS,                          KC_NO,     KC_NO,       KC_NO
+                                                  KC_NO,      KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO
         //                                  '-------------------------------------'                    '-------------------------------------'
     ),
     
