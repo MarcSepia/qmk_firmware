@@ -2,7 +2,14 @@
 #include "keymap_spanish.h"
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_spanish.h#L78
 
-// Layer tap example -> LT(_NUM, KC_BSPC)
+
+enum custom_keycodes { 
+    CUT = SAFE_RANGE, 
+    COPY, 
+    PASTE, 
+    UNDO
+};
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_split_3x6_3(
@@ -61,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
               KC_NO,    KC_CAPS,     KC_NO,       KC_NO,      KC_NO,      KC_NO,                          ES_SLSH,     ES_4,       ES_5,       ES_6,      ES_EQL,      KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-              KC_NO,    KC_UNDO,     KC_CUT,     KC_COPY,   KC_PASTE,     KC_NO,                          ES_PLUS,     ES_1,       ES_2,       ES_3,      ES_HASH,     KC_NO,
+              KC_NO,      UNDO,       CUT,        COPY,       PASTE,      KC_NO,                          ES_PLUS,     ES_1,       ES_2,       ES_3,      ES_HASH,     KC_NO,
         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
                                                   KC_NO,      KC_NO,      KC_NO,                          ES_MINS,     ES_0,       ES_DOT
         //                                  '-------------------------------------'                    '-------------------------------------'
@@ -95,6 +102,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
+
+//     [_EMPTY] = LAYOUT_split_3x6_3(
+//         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
+//               KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
+//         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
+//               KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
+//         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
+//               KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
+//         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
+//                                                   KC_NO,      KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO
+//         //                                  '-------------------------------------'                    '-------------------------------------'
+//     ),
+
+
+
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
       case LCTL_T(ES_A): 
@@ -109,22 +131,88 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
       case LT(_NAV, KC_SPC):
       case LT(_NUM, KC_TAB):
       case LT(_SYM_1, KC_ENTER):
-      case LT(_SYM_2, KC_BSPC):
+      case LT(_SYM_2, KC_BSPC): 
       case LT(_FN, KC_DEL):
-            return 200;
+            return 180;
       default:
             return 100;
     }
 }
 
-//     [_EMPTY] = LAYOUT_split_3x6_3(
-//         //,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
-//               KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
-//         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-//               KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
-//         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-//               KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO,      KC_NO,      KC_NO,      KC_NO,
-//         //|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-//                                                   KC_NO,      KC_NO,      KC_NO,                           KC_NO,     KC_NO,       KC_NO
-//         //                                  '-------------------------------------'                    '-------------------------------------'
-//     ),
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // case ES_NTIL: // Tecla Ñ
+        //     if (record->event.pressed) {
+        //         if (get_mods() & MOD_MASK_CTRL) {
+        //             // Eliminar Ctrl temporalmente
+        //             del_mods(MOD_MASK_CTRL);
+        //             // Simula la pulsación de KC_QUOT (´)
+        //             tap_code(KC_QUOT);
+        //             // Restaurar Ctrl
+        //             set_mods(get_mods() | MOD_MASK_CTRL);
+        //             return false; // No procesar la Ñ
+        //         }
+        //     }
+        //     break;
+
+        // case ES_P: // Tecla P
+        //     if (record->event.pressed) {
+        //         if (get_mods() & MOD_MASK_CTRL) {
+        //             // Eliminar Ctrl temporalmente
+        //             del_mods(MOD_MASK_CTRL);
+        //             // Simula la pulsación de ES_GRV (`)
+        //             tap_code(ES_GRV);
+        //             // Restaurar Ctrl
+        //             set_mods(get_mods() | MOD_MASK_CTRL);
+        //             return false; // No procesar la P
+        //         }
+        //     }
+        //     break;
+        case CUT:
+            if (record->event.pressed) {
+                // Ctrl+X (Cut)
+                register_code(KC_LCTL);
+                register_code(KC_X);
+                unregister_code(KC_X);
+                unregister_code(KC_LCTL);
+            }
+            return false;
+            break;
+        case COPY:
+            if (record->event.pressed) {
+                // Ctrl+C (Copy)
+                register_code(KC_LCTL);
+                register_code(KC_C);
+                unregister_code(KC_C);
+                unregister_code(KC_LCTL);
+            }
+            return false;
+            break;
+
+        case PASTE:
+            if (record->event.pressed) {
+                // Ctrl+V (Paste)
+                register_code(KC_LCTL);
+                register_code(KC_V);
+                unregister_code(KC_V);
+                unregister_code(KC_LCTL);
+            }
+            return false;
+            break;
+
+        case UNDO:
+            if (record->event.pressed) {
+                // Ctrl+Z (Undo)
+                register_code(KC_LCTL);
+                register_code(KC_Z);
+                unregister_code(KC_Z);
+                unregister_code(KC_LCTL);
+            }
+            return false;
+            break;
+
+        default:
+            return true; // Procesa otras teclas normalmente
+    }
+    return true;
+}
