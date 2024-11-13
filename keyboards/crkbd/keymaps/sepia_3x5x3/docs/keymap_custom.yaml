@@ -4,7 +4,6 @@
 # Tal vez poner todos estos simbolos en el SYM a la derecha
 # Poner también el # en el symbol layer, no solo en el number layer
 # Añadir repeat keys  https://docs.qmk.fm/features/repeat_key
-# En los symbols2, poner el € en la E y el $ en la D, es mas intuitivo
 
 layout: 
   qmk_keyboard: crkbd/rev1
