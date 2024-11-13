@@ -142,101 +142,102 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        // case ES_NTIL: // Tecla Ñ
-        //     if (record->event.pressed) {
-        //         if (get_mods() & MOD_MASK_CTRL) {
-        //             // Eliminar Ctrl temporalmente
-        //             del_mods(MOD_MASK_CTRL);
-        //             // Simula la pulsación de KC_QUOT (´)
-        //             tap_code(KC_QUOT);
-        //             // Restaurar Ctrl
-        //             set_mods(get_mods() | MOD_MASK_CTRL);
-        //             return false; // No procesar la Ñ
-        //         }
-        //     }
-        //     break;
+      static uint16_t last_tap_time_ntil = 0;
+      static uint16_t last_tap_time_p = 0;
 
-        // case ES_P: // Tecla P
-        //     if (record->event.pressed) {
-        //         if (get_mods() & MOD_MASK_CTRL) {
-        //             // Eliminar Ctrl temporalmente
-        //             del_mods(MOD_MASK_CTRL);
-        //             // Simula la pulsación de ES_GRV (`)
-        //             tap_code(ES_GRV);
-        //             // Restaurar Ctrl
-        //             set_mods(get_mods() | MOD_MASK_CTRL);
-        //             return false; // No procesar la P
-        //         }
-        //     }
-        //     break;
-        case CUT:
-            if (record->event.pressed) {
-                // Ctrl+X (Cut)
-                register_code(KC_LCTL);
-                register_code(KC_X);
-                unregister_code(KC_X);
-                unregister_code(KC_LCTL);
-            }
-            return false;
-            break;
-        case COPY:
-            if (record->event.pressed) {
-                // Ctrl+C (Copy)
-                register_code(KC_LCTL);
-                register_code(KC_C);
-                unregister_code(KC_C);
-                unregister_code(KC_LCTL);
-            }
-            return false;
-            break;
+      switch (keycode) {
+            case ES_NTIL:
+                  if (record->event.pressed) {
+                        uint16_t current_time = timer_read();
+                        if (current_time - last_tap_time_ntil < TAPPING_TERM) {
+                              tap_code(KC_QUOT); // Write ´
+                              last_tap_time_ntil = 0; // Reset tap time
+                              return false;
+                        }
+                        last_tap_time_ntil = current_time;
+                  }
+                  break;
 
-        case PASTE:
-            if (record->event.pressed) {
-                // Ctrl+V (Paste)
-                register_code(KC_LCTL);
-                register_code(KC_V);
-                unregister_code(KC_V);
-                unregister_code(KC_LCTL);
-            }
-            return false;
-            break;
+            case ES_P:
+                  if (record->event.pressed) {
+                        uint16_t current_time = timer_read();
+                        if (current_time - last_tap_time_p < TAPPING_TERM) {
+                              tap_code(ES_GRV); // Write `
+                              last_tap_time_p = 0; // Reset tap time
+                              return false;
+                        }
+                        last_tap_time_p = current_time;
+                  }
+                  break;
 
-        case UNDO:
-            if (record->event.pressed) {
-                // Ctrl+Z (Undo)
-                register_code(KC_LCTL);
-                register_code(KC_Z);
-                unregister_code(KC_Z);
-                unregister_code(KC_LCTL);
-            }
-            return false;
-            break;
+            case CUT:
+                  if (record->event.pressed) {
+                        // Ctrl+X (Cut)
+                        register_code(KC_LCTL);
+                        register_code(KC_X);
+                        unregister_code(KC_X);
+                        unregister_code(KC_LCTL);
+                  }
+                  return false;
+                  break;
 
-        case HIRAGANA:
-            if (record->event.pressed) {
-                // Shift + Caps Lock
-                register_code(KC_LSFT);
-                register_code(KC_CAPS);
-                unregister_code(KC_CAPS);
-                unregister_code(KC_LSFT);
-            }
-            return false;
-            break;
+            case COPY:
+                  if (record->event.pressed) {
+                        // Ctrl+C (Copy)
+                        register_code(KC_LCTL);
+                        register_code(KC_C);
+                        unregister_code(KC_C);
+                        unregister_code(KC_LCTL);
+                  }
+                  return false;
+                  break;
 
-        case LANG:
-            if (record->event.pressed) {
-                // Alt + Shift
-                register_code(KC_LALT);
-                register_code(KC_LSFT);
-                unregister_code(KC_LSFT);
-                unregister_code(KC_LALT);
-            }
-            return false;
-            break;
+            case PASTE:
+                  if (record->event.pressed) {
+                        // Ctrl+V (Paste)
+                        register_code(KC_LCTL);
+                        register_code(KC_V);
+                        unregister_code(KC_V);
+                        unregister_code(KC_LCTL);
+                  }
+                  return false;
+                  break;
 
-        default:
-            return true; // Procesa otras teclas normalmente
-    }
-    return true;
+            case UNDO:
+                  if (record->event.pressed) {
+                        // Ctrl+Z (Undo)
+                        register_code(KC_LCTL);
+                        register_code(KC_Z);
+                        unregister_code(KC_Z);
+                        unregister_code(KC_LCTL);
+                  }
+                  return false;
+                  break;
+
+            case HIRAGANA:
+                  if (record->event.pressed) {
+                        // Shift + Caps Lock
+                        register_code(KC_LSFT);
+                        register_code(KC_CAPS);
+                        unregister_code(KC_CAPS);
+                        unregister_code(KC_LSFT);
+                  }
+                  return false;
+                  break;
+
+            case LANG:
+                  if (record->event.pressed) {
+                        // Alt + Shift
+                        register_code(KC_LALT);
+                        register_code(KC_LSFT);
+                        unregister_code(KC_LSFT);
+                        unregister_code(KC_LALT);
+                  }
+                  return false;
+                  break;
+
+            default:
+                  return true; // Process other keys normally
+      }
+      return true;
 }
