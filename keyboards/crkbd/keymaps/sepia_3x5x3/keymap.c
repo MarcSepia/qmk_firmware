@@ -136,34 +136,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	static uint16_t last_tap_time_ntil = 0;
-	static uint16_t last_tap_time_p = 0;
-
 	switch (keycode) {
-		case ES_NTIL:
-			if (record->event.pressed) {
-				uint16_t current_time = timer_read();
-				if (current_time - last_tap_time_ntil < TAPPING_TERM) {
-					tap_code(KC_QUOT); // Write ´
-					last_tap_time_ntil = 0; // Reset tap time
-					return false;
-				}
-				last_tap_time_ntil = current_time;
-			}
-			break;
-
-		case ES_P:
-			if (record->event.pressed) {
-				uint16_t current_time = timer_read();
-				if (current_time - last_tap_time_p < TAPPING_TERM) {
-					tap_code(ES_GRV); // Write `
-					last_tap_time_p = 0; // Reset tap time
-					return false;
-				}
-				last_tap_time_p = current_time;
-			}
-			break;
-
 		case CUT:
 			if (record->event.pressed) {
 				// Ctrl+X (Cut)
