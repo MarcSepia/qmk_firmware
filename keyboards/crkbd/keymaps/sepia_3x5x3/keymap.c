@@ -22,6 +22,91 @@ enum custom_keycodes {
 	LANG_TOGL_JP 
 };
 
+inline uint16_t lang_key(uint16_t sp_key, uint16_t en_key, uint16_t jp_key) {
+    switch (language) {
+        case LANG_SPANISH:
+            return sp_key;
+        case LANG_ENGLISH:
+            return en_key;
+        case LANG_JAPANESE:
+            return jp_key;
+        default:
+            return sp_key; // Valor por defecto, en caso de que `language` sea inválido
+    }
+}
+
+
+// Define language-specific key mappings for letters
+#define LT_A lang_key(ES_A, EN_A, JP_A) // A
+#define LT_B lang_key(ES_B, EN_B, JP_B) // B
+#define LT_C lang_key(ES_C, EN_C, JP_C) // C
+#define LT_D lang_key(ES_D, EN_D, JP_D) // D
+#define LT_E lang_key(ES_E, EN_E, JP_E) // E
+#define LT_F lang_key(ES_F, EN_F, JP_F) // F
+#define LT_G lang_key(ES_G, EN_G, JP_G) // G
+#define LT_H lang_key(ES_H, EN_H, JP_H) // H
+#define LT_I lang_key(ES_I, EN_I, JP_I) // I
+#define LT_J lang_key(ES_J, EN_J, JP_J) // J
+#define LT_K lang_key(ES_K, EN_K, JP_K) // K
+#define LT_L lang_key(ES_L, EN_L, JP_L) // L
+#define LT_M lang_key(ES_M, EN_M, JP_M) // M
+#define LT_N lang_key(ES_N, EN_N, JP_N) // N
+#define LT_O lang_key(ES_O, EN_O, JP_O) // O
+#define LT_P lang_key(ES_P, EN_P, JP_P) // P
+#define LT_Q lang_key(ES_Q, EN_Q, JP_Q) // Q
+#define LT_R lang_key(ES_R, EN_R, JP_R) // R
+#define LT_S lang_key(ES_S, EN_S, JP_S) // S
+#define LT_T lang_key(ES_T, EN_T, JP_T) // T
+#define LT_U lang_key(ES_U, EN_U, JP_U) // U
+#define LT_V lang_key(ES_V, EN_V, JP_V) // V
+#define LT_W lang_key(ES_W, EN_W, JP_W) // W
+#define LT_X lang_key(ES_X, EN_X, JP_X) // X
+#define LT_Y lang_key(ES_Y, EN_Y, JP_Y) // Y
+#define LT_Z lang_key(ES_Z, EN_Z, JP_Z) // Z
+#define LT_NTIL lang_key(ES_NTIL, EN_N, JP_N) // Ñ
+
+// Define language-specific key mappings for symbols
+#define LT_EXLM lang_key(ES_EXLM, EN_EXLM, JP_EXLM) // !
+#define LT_QUES lang_key(ES_QUES, EN_QUES, JP_QUES) // ?
+#define LT_LCBR lang_key(ES_LCBR, EN_LCBR, JP_LCBR) // {
+#define LT_RCBR lang_key(ES_RCBR, EN_RCBR, JP_RCBR) // }
+#define LT_PIPE lang_key(ES_PIPE, EN_PIPE, JP_PIPE) // |
+#define LT_SLSH lang_key(ES_SLSH, EN_SLSH, JP_SLSH) // /
+#define LT_DQUO lang_key(ES_DQUO, EN_DQUO, JP_DQUO) // "
+#define LT_LPRN lang_key(ES_LPRN, EN_LPRN, JP_LPRN) // (
+#define LT_RPRN lang_key(ES_RPRN, EN_RPRN, JP_RPRN) // )
+#define LT_AMPR lang_key(ES_AMPR, EN_AMPR, JP_AMPR) // &
+#define LT_AT lang_key(ES_AT, EN_AT, JP_AT) // @
+#define LT_TILD lang_key(ES_TILD, EN_TILD, JP_TILD) // ~
+#define LT_LBRC lang_key(ES_LBRC, EN_LBRC, JP_LBRC) // [
+#define LT_RBRC lang_key(ES_RBRC, EN_RBRC, JP_RBRC) // ]
+#define LT_CIRC lang_key(ES_CIRC, EN_CIRC, JP_CIRC) // ^
+#define LT_LABK lang_key(ES_LABK, EN_LABK, JP_LABK) // <
+#define LT_RABK lang_key(ES_RABK, EN_RABK, JP_RABK) // >
+#define LT_EQL lang_key(ES_EQL, EN_EQL, JP_EQL) // =
+#define LT_IEXL lang_key(ES_IEXL, EN_IEXL, JP_IEXL) // ¡
+#define LT_IQUE lang_key(ES_IQUE, EN_IQUE, JP_IQUE) // ¿
+#define LT_EURO lang_key(ES_EURO, EN_EURO, JP_EURO) // €
+#define LT_UNDS lang_key(ES_UNDS, EN_UNDS, JP_UNDS) // _
+#define LT_FORD lang_key(ES_FORD, EN_FORD, JP_FORD) // ª
+#define LT_BSLS lang_key(ES_BSLS, EN_BSLS, JP_BSLS) // "\"
+#define LT_QUOT lang_key(ES_QUOT, EN_QUOT, JP_QUOT) // '
+#define LT_DLR lang_key(ES_DLR, EN_DLR, JP_DLR) // $
+#define LT_MINS lang_key(ES_MINS, EN_MINS, JP_MINS) // -
+#define LT_MORD lang_key(ES_MORD, EN_MORD, JP_MORD) // º
+#define LT_DIAE lang_key(ES_DIAE, EN_DIAE, JP_DIAE) // ¨
+#define LT_NOT lang_key(ES_NOT, EN_NOT, JP_NOT) // ¬
+#define LT_BULT lang_key(ES_BULT, EN_BULT, JP_BULT) // ·
+#define LT_HASH lang_key(ES_HASH, EN_HASH, JP_HASH) // #
+#define LT_ASTR lang_key(ES_ASTR, EN_ASTR, JP_ASTR) // *
+#define LT_PLUS lang_key(ES_PLUS, EN_PLUS, JP_PLUS) // +
+#define LT_PERC lang_key(ES_PERC, EN_PERC, JP_PERC) // %
+#define LT_COMM lang_key(ES_COMM, EN_COMM, JP_COMM) // ,
+#define LT_DOT lang_key(ES_DOT, EN_DOT, JP_DOT) // .
+#define LT_GRV lang_key(ES_GRV, EN_GRV, JP_GRV) // `
+#define LT_CCED lang_key(ES_CCED, EN_CCED, JP_CCED) // ç
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_QWERTY] = LAYOUT_split_3x6_3(
 		//,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
