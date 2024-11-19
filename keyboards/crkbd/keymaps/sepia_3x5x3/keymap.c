@@ -2,13 +2,24 @@
 #include "keymap_spanish.h"
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_spanish.h#L78
 
+enum language_options {
+    LANG_SPANISH,
+    LANG_ENGLISH,
+    LANG_JAPANESE
+};
+
+uint8_t language = LANG_SPANISH;
+
 enum custom_keycodes {
 	CUT = SAFE_RANGE,
 	COPY,
 	PASTE,
 	UNDO,
 	LANG,
-	HIRAGANA
+	HIRAGANA,
+	LANG_TOGL_SP,
+	LANG_TOGL_EN,
+	LANG_TOGL_JP 
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -62,9 +73,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[_NUM] = LAYOUT_split_3x6_3(
 		//,-----------------------------------------------------------------------.                    ,-----------------------------------------------------------------------.
-			  KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,                          ES_ASTR,     ES_7,       ES_8,       ES_9,      ES_PERC,     KC_NO,
+			  KC_NO,      LANG,  LANG_TOGL_SP,LANG_TOGL_EN,LANG_TOGL_JP, HIRAGANA,                        ES_ASTR,     ES_7,       ES_8,       ES_9,      ES_PERC,     KC_NO,
 		//|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
-			  KC_NO,    KC_CAPS,      LANG,     HIRAGANA,     KC_NO,      KC_NO,                          ES_SLSH,     ES_4,       ES_5,       ES_6,      ES_EQL,      KC_NO,
+			  KC_NO,    KC_CAPS,     KC_NO,       KC_NO,      KC_NO,      KC_NO,                          ES_SLSH,     ES_4,       ES_5,       ES_6,      ES_EQL,      KC_NO,
 		//|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
 			  KC_NO,      UNDO,       CUT,        COPY,       PASTE,      KC_NO,                          ES_PLUS,     ES_1,       ES_2,       ES_3,      ES_HASH,     KC_NO,
 		//|-----------+-----------+-----------+-----------+-----------+-----------|                    |-----------+-----------+-----------+-----------+-----------+-----------|
@@ -196,6 +207,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 				unregister_code(KC_LALT);
 			}
 			return false;
+
+        case LANG_TOGL_SP:
+            language = LANG_SPANISH;
+            return false;
+
+        case LANG_TOGL_EN:
+            language = LANG_ENGLISH;
+            return false;
+
+        case LANG_TOGL_JP:
+            language = LANG_JAPANESE;
+            return false;
 
 		default:
 			return true; // Process other keys normally
