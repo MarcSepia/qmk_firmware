@@ -1,9 +1,14 @@
 
 Pre-requisitos
+https://docs.qmk.fm/cli
 1. Tener instalado python
 2. Haber instalado qmk con pip3
 3. Hacer qmk setup
-
+(Si despues de instalar qmk no funciona, tal vez falta en .bashrc)
+```
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
 
 Crear y cargar un layout para el keeb
 1. Compilar
