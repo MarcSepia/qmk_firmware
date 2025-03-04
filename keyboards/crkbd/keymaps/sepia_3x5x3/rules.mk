@@ -1,19 +1,20 @@
 ###### v3
 RGBLIGHT_ENABLE = no
 RGB_MATRIX_ENABLE = no
-# BONGO_ENABLED     = yes
 
 LTO_ENABLE = yes
 EXTRAKEY_ENABLE = yes
-WPM_ENABLE = no
 AUTO_SHIFT_ENABLE = no
 
-
-# ifeq ($(BONGO_ENABLED), yes)
-#     OPT_DEFS += -DBONGO_ENABLED
-# else
-#     OPT_DEFS += -DLUNA_ENABLED
-# endif
+# START - OLED Enable
+BONGO_ENABLED = yes 
+OLED_ENABLE = yes
+WPM_ENABLE = yes
+OPT_DEFS += -DBONGO_ENABLED
+SRC += bongo.c
+SRC += ./lib/layer_state_reader.c
+SRC += ./lib/keylogger.c 
+# END - OLED Enable
 
 BOOTLOADER = atmel-dfu
 ifeq ($(PROMICRO), yes)
